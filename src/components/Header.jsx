@@ -1,28 +1,39 @@
-import React from 'react'
-const headerNav=[
+import React, { useState } from 'react'
+const header_Nav = [
   {
-    title:"intro",
-    url:"#intro",
+    title: "intro",
+    url: "#intro",
   },
   {
-    title:"skill",
-    url:"#skill",
+    title: "skill",
+    url: "#skill",
   },
   {
-    title:"site",
-    url:"#site",
+    title: "site",
+    url: "#site",
   },
   {
-    title:"portfolio",
-    url:"#port",
+    title: "portfolio",
+    url: "#port",
   },
   {
-    title:"contact",
-    url:"#contact",
+    title: "contact",
+    url: "#contact",
   },
 ]
 
 const Header = () => {
+
+  const [show, setShow] = useState(false);
+
+  const toggleMenu =()=>{
+    setShow((pshow) => !pshow);
+  }
+
+  // useState() : 훅 명령어 하나로 관리하는 명령어로 상태가 변경이 되면 스스로 업데이트 해주는 명령어입니다.
+  // show : 현재 값
+  // setShow : 상태를 업그레이드한 값
+
   return (
     <header id='header' role='banner'>
       <div className="header_inner">
@@ -31,21 +42,16 @@ const Header = () => {
             portfolio <em>react</em>
           </a>
         </div>
-        <nav className='header_nav' role='navigation' aria-label='메인메뉴'>
+        <nav className={`header_nav ${show ? "show" : ""}`} role='navigation' aria-label='메인메뉴'>
           <ul>
-            {headerNav.map((nav,key)=>(
-              <li key={key}><a href={nav.url}>{nav.title}</a></li>
+            {header_Nav.map((nav,key)=>(
+              <li key={key}>
+                <a href={nav.url}>{nav.title}</a>
+              </li>
             ))}
           </ul>
         </nav>
-        <div 
-          className="header_nav_mobile"
-          id='headerToggle'
-          aria-expanded='false'
-          aria-controls='primary-main'
-          role='button'
-          tabIndex="0"
-        >
+        <div className="header_nav_mobile" id='headerToggle' aria-controls='햄버거 메뉴' aria-expanded={show ? "true" : "false"} role='button' tabIndex="0" onClick={toggleMenu}>
           <span></span>
         </div>
       </div>

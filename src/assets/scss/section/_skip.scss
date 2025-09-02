@@ -1,16 +1,15 @@
 #skip{
+
     a{
         position: absolute;
-        left: 10px;
         top: -100px;
-        z-index: 1000;
+        left: 10px;
         background-color: var(--black);
-        color:var(--white);
-        padding: 10px 20px;
-        font-size: 1rem;
+        color: var(--white);
+        padding: 10px;
 
-        &:focus ,&:active{top: 
-            10px;
+        &:focus{
+            top: 10px;
         }
     }
 }
