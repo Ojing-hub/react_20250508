@@ -9,6 +9,7 @@ import Port from '../components/Port'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 
+
 const Homeview = () => {
   return (
     <>
@@ -20,7 +21,7 @@ const Homeview = () => {
             <Site />
             <Port />
             <Contact />
-        </Main>
+        </Main>        
         <Footer />
     </>
   )

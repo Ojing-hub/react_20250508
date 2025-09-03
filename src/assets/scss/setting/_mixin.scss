@@ -1,26 +1,26 @@
-// 가운데 정렬
+//가운데 정렬
 @mixin flex-center{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-// 양쪽 정렬
+//양쪽정렬
 @mixin flex-between{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-// 중앙 정렬
+//중앙절렬
 @mixin position-center{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
 }
 
-// 상단 고정
+//상단고정
 @mixin position-fixed{
     width: 100%;
     position: fixed;
