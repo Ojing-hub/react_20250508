@@ -3,7 +3,7 @@ import React from 'react'
 import img_m from "../assets/img/img.png"
 
 const introText = {
-  title: "MBC acdemy",
+  title: "MBC academy",
   desc: ["talent is","found at the end of the","effort"]
 }
 
